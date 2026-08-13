@@ -1,0 +1,10 @@
+# Real database credentials — never commit this. Copy config.php.example instead.
+config.php
+
+# User-uploaded photos — these live on the server (or a Railway Volume), not in git.
+storage/uploads/*
+!storage/uploads/.gitkeep
+
+# OS/editor cruft
+.DS_Store
+Thumbs.db

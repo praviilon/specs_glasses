@@ -1,0 +1,12 @@
+# Block direct access to sensitive files from the web.
+# PHP can still read them internally via require/include — this only stops
+# a browser from requesting them directly.
+<FilesMatch "(^config\.php$|\.sql$|\.md$)">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order allow,deny
+        Deny from all
+    </IfModule>
+</FilesMatch>

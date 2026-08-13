@@ -1,0 +1,19 @@
+<?php
+// Copy this file to config.php (same folder) and fill in your real details.
+// config.php is blocked from direct web access by .htaccess — keep it that way,
+// and never commit your real config.php to a public repository.
+
+return [
+    'db' => [
+        'host'    => 'localhost',
+        'port'    => '3306',
+        'name'    => 'your_database_name',
+        'user'    => 'your_database_user',
+        'pass'    => 'your_database_password',
+        'charset' => 'utf8mb4',
+    ],
+
+    // Maximum size accepted for a single uploaded image, in bytes.
+    // Also make sure your host's upload_max_filesize / post_max_size (see .user.ini) allow this.
+    'max_upload_bytes' => 8 * 1024 * 1024,
+];
