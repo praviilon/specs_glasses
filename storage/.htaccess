@@ -1,0 +1,10 @@
+# Uploaded photos live under here but must never be served directly —
+# they're only readable through api/serve.php, which checks the requester
+# actually owns the photo. This blocks any direct URL guesswork.
+<IfModule mod_authz_core.c>
+    Require all denied
+</IfModule>
+<IfModule !mod_authz_core.c>
+    Order allow,deny
+    Deny from all
+</IfModule>
